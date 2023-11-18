@@ -1,0 +1,14 @@
+spring.application.name: nomad-application
+spring.active.profile: dev
+spring.cloud.vault:
+  authentication: TOKEN
+  token: hvs.mxwxHwudE1ZnScw3DCCaX08P
+  host: 127.0.0.1
+  port: 8200
+  scheme: http
+  backend: secret
+  kv:
+    enabled: true
+    backend: secret
+    application-name: gs-vault-config
+spring.config.import: vault://
